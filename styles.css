@@ -1,6 +1,6 @@
 * {
   font-family: "Chewy", cursive;
-  font-size: large;
+  font-size: 32px;
   color: rgb(65, 65, 65);
 }
 
@@ -19,16 +19,30 @@ body {
   background: linear-gradient(145deg, #9198e5c6, #59ddbea5);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  border-radius: 50px;
 }
-.seach-bar-container {
+
+.search-container {
+  margin-top: 50px;
+  height: 54px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 input {
   border-radius: 20px;
   border: none;
-  width: 324px;
-  height: 48px;
-  padding-left: 10px;
+  width: 524px;
+  height: 54px;
+  padding: 5px;
+  padding-left: 15px;
+  margin-right: 10px;
+}
+
+.search-icon {
+  width: 54px;
+  height: 54px;
+  cursor: pointer;
 }
