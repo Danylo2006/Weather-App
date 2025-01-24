@@ -1,0 +1,34 @@
+* {
+  font-family: "Chewy", cursive;
+  font-size: large;
+  color: rgb(65, 65, 65);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+
+.card {
+  height: 1024px;
+  width: 928px;
+  background: linear-gradient(145deg, #9198e5c6, #59ddbea5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seach-bar-container {
+  display: flex;
+}
+
+input {
+  border-radius: 20px;
+  border: none;
+  width: 324px;
+  height: 48px;
+  padding-left: 10px;
+}
