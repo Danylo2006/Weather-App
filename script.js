@@ -2,7 +2,8 @@ const searchText = document.getElementById("input-text");
 const searchBtn = document.querySelector(".search-button");
 
 searchBtn.addEventListener("click", function () {
-  console.log(searchText.value);
+  locationValue = searchText.value;
+  getWeather(locationValue);
 });
 
 async function getWeather(location) {
@@ -12,6 +13,10 @@ async function getWeather(location) {
   // Make the request
   const response = await fetch(apiUrl);
   const data = await response.json();
+
+  // log for debugging (remove for production)
   console.log(data);
+  console.log(
+    `The tempreture in ${location} is ${data["current"]["temp_c"]}° C`
+  );
 }
-getWeather("London");
