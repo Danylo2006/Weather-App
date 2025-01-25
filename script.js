@@ -1,6 +1,10 @@
 // Selectors for input text and button
 const searchText = document.getElementById("input-text");
 const searchBtn = document.querySelector(".search-button");
+const tempSelector = document.querySelector(".temperature");
+const locationSelector = document.querySelector(".location-text");
+const windSelector = document.getElementById("wind");
+const humiditySelector = document.getElementById("humidity");
 
 searchBtn.addEventListener("click", function () {
   locationValue = searchText.value;
@@ -18,10 +22,13 @@ async function getWeather(location) {
   // Make the request
   const response = await fetch(apiUrl);
   const data = await response.json();
+  const { temp_c: temp, wind_kph: wind, humidity } = data.current;
+  tempSelector.textContent = `${temp}°C`;
+  locationSelector.textContent = data.location.name;
+  windSelector.textContent = `${wind} km/h`;
+  humiditySelector.textContent = `${humidity} %`;
 
   // log for debugging (remove for production)
   console.log(data);
-  console.log(
-    `The tempreture in ${location} is ${data["current"]["temp_c"]}° C`
-  );
+  console.log(`The temperature in ${location} is ${temp}° C`);
 }
