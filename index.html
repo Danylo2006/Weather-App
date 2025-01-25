@@ -10,9 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,641;1,641&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
-    />
     />
   </head>
   <body>
@@ -35,10 +34,27 @@
           </svg>
         </button>
       </div>
-      <h2 class="temperature">Temperature</h2>
-      <div class="indicators-container">
-        <h2 class="indicators">Humidity</h2>
-        <h2 class="indicators">Cloudiness</h2>
+      <div class="temperature-container">
+        <img src="assets/images/clouds.png" id="weather-status" />
+        <h2 class="temperature">0°C</h2>
+      </div>
+      <h1 class="location-text">City</h1>
+
+      <div class="weather-metrics">
+        <div class="metric-item">
+          <img src="assets/images/wind.png" class="weather-metric-img" />
+          <div class="metric-data">
+            <h3 class="metric-text" id="wind">0 km/h</h3>
+            <h2 class="metric-title">Wind</h2>
+          </div>
+        </div>
+        <div class="metric-item">
+          <img src="assets/images/humidity.png" class="weather-metric-img" />
+          <div class="metric-data">
+            <h3 class="metric-text" id="humidity">0 %</h3>
+            <h2 class="metric-title">Humidity</h2>
+          </div>
+        </div>
       </div>
     </div>
     <!--script.js -->
